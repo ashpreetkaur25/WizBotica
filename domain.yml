@@ -1,0 +1,179 @@
+version: "3.1"
+
+intents:
+  - greet
+  - mood_unhappy
+  - affirm
+  - deny
+  - choose_house
+  - request_house_guide
+  - start_ai_lesson
+  - answer_ai_quiz
+  - start_nlp_lesson
+  - answer_nlp_quiz
+  - start_cyber_lesson
+  - answer_cyber_quiz
+  - start_data_lesson
+  - answer_data_quiz
+  - start_dsa_lesson
+  - answer_dsa_quiz
+
+slots:
+  house:
+    type: text
+    mappings:
+      - type: custom
+
+responses:
+
+  utter_greet:
+    - text: "Welcome, apprentice! ⚡ Choose your house to begin your magical journey: Ignis, Aquae, Sylvae, or Fulgur."
+
+  utter_house_guide:
+    - text: |
+        🧙‍♂️ Choose wisely:
+        🔥 **Ignis** – AI & Machine Learning
+        🌊 **Aquae** – NLP & Language
+        🌿 **Sylvae** – Data Science
+        ⚡ **Fulgur** – Cybersecurity
+
+  utter_house_confirmation:
+    - text: "🏰 Wise choice — welcome to House {house}! Your path is now set with power and purpose."
+
+  utter_cheer_up:
+    - text: "Even in shadows, there is light. You’ve got this! ✨"
+
+  utter_did_that_help:
+    - text: "Did that brighten your spirits, young one?"
+
+  utter_happy:
+    - text: "Wonderful! Let the magic continue! 🪄"
+
+  utter_goodbye:
+    - text: "Farewell, until we cast again. 🧙‍♂️"
+
+  utter_default:
+    - text: "I’m afraid I didn’t understand that incantation... could you try again?"
+
+  # AI Spell
+  utter_ai_intro:
+    - text: "🧠 Cognitia Artificialia — The Spell of Synthetic Thought. AI lets machines act smart."
+
+  utter_ai_teach_1:
+    - text: "✨ AI mimics human intelligence — like reasoning, problem solving, and learning."
+
+  utter_ai_teach_2:
+    - text: "⚙️ There are two types: Narrow AI (specific tasks) and General AI (human-like cognition)."
+
+  utter_ai_teach_3:
+    - text: "📚 AI uses models trained on data — with algorithms like decision trees or neural networks."
+
+  utter_ai_quiz:
+    - text: "🔍 Quiz: What is Artificial Intelligence?"
+
+  utter_correct_ai:
+    - text: "🧠 Correct! You’ve understood the essence of Artificial Intelligence!"
+
+  utter_wrong_ai:
+    - text: "Hmm... Not quite. Think of how machines try to *mimic* human intelligence."
+
+  # NLP Spell
+  utter_nlp_intro:
+    - text: "📖 Verba Alchemica — The Spell of Language. NLP allows machines to understand human language."
+
+  utter_nlp_teach_1:
+    - text: "✨ NLP starts by converting text into tokens — the smallest units of meaning."
+
+  utter_nlp_teach_2:
+    - text: "🧠 Word embeddings help models understand relationships between words."
+
+  utter_nlp_teach_3:
+    - text: "🤖 Transformers like BERT and GPT changed NLP — enabling context-aware understanding."
+
+  utter_nlp_quiz:
+    - text: "🧪 Quiz: What is the main purpose of NLP?"
+
+  utter_correct_nlp:
+    - text: "📜 Splendid! You’ve grasped the essence of linguistic alchemy."
+
+  utter_wrong_nlp:
+    - text: "Not quite! NLP is all about language — words, grammar, and context."
+
+  # Cybersecurity Spell
+  utter_cyber_intro:
+    - text: "🛡️ Defensus Data — The Guardian Spell. Cybersecurity protects data, systems, and networks."
+
+  utter_cyber_teach_1:
+    - text: "🔐 Firewalls, antivirus, and encryption help defend against threats."
+
+  utter_cyber_teach_2:
+    - text: "🧠 Cybersecurity involves confidentiality, integrity, and availability — the CIA triad."
+
+  utter_cyber_teach_3:
+    - text: "⚠️ Common attacks: phishing, malware, DDoS. Vigilance is key."
+
+  utter_cyber_quiz:
+    - text: "🧪 Quiz: What is the core goal of cybersecurity?"
+
+  utter_correct_cyber:
+    - text: "🛡️ Exactly! You shall defend the realms of data wisely."
+
+  utter_wrong_cyber:
+    - text: "Close! But cybersecurity is more than just protection — it ensures trust."
+
+  # Data Science Spell
+  utter_data_intro:
+    - text: "📊 Numerus Dominium — The Spell of Insight. Data science finds meaning in numbers."
+
+  utter_data_teach_1:
+    - text: "🔎 It uses statistics, visualization, and ML to interpret data."
+
+  utter_data_teach_2:
+    - text: "📈 Tools like Pandas and Scikit-learn let us clean and model data."
+
+  utter_data_teach_3:
+    - text: "📉 Good data scientists explore, question, and communicate results with clarity."
+
+  utter_data_quiz:
+    - text: "🧪 Quiz: What is the goal of data science?"
+
+  utter_correct_data:
+    - text: "📊 Correct! You now wield the Spell of Insight."
+
+  utter_wrong_data:
+    - text: "Not quite — remember, data science seeks meaning in patterns and numbers."
+
+  # DSA Spell
+  utter_dsa_intro:
+    - text: "🧮 Structura Codex — The Spell of Order. Data Structures organize data for efficient access."
+
+  utter_dsa_teach_1:
+    - text: "🔗 Lists, stacks, queues, and trees are examples of structures."
+
+  utter_dsa_teach_2:
+    - text: "🔍 Each structure is chosen based on the operations needed (e.g., insert, delete, search)."
+
+  utter_dsa_teach_3:
+    - text: "🧠 Algorithms interact with structures — like traversals, sorts, or searches."
+
+  utter_dsa_quiz:
+    - text: "🧪 Quiz: What is a data structure used for?"
+
+  utter_correct_dsa:
+    - text: "📘 That’s right! You now command the Codex of Order!"
+
+  utter_wrong_dsa:
+    - text: "Hmm... Not quite. Think of structures as enchanted containers for data."
+
+actions:
+  - action_set_house
+  - action_assign_house
+  - action_check_ai_answer
+  - action_check_nlp_answer
+  - action_check_cyber_answer
+  - action_check_data_answer
+  - action_check_dsa_answer
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
