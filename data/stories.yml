@@ -1,0 +1,215 @@
+version: "3.1"
+
+stories:
+
+# 🏰 House selection (manual)
+- story: choose house
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: choose_house
+    - action: action_set_house
+    - action: utter_house_confirmation
+
+# 😄 Mood - Sad then Affirm
+- story: mood sad then affirm
+  steps:
+    - intent: mood_unhappy
+    - action: utter_cheer_up
+    - action: utter_did_that_help
+    - intent: affirm
+    - action: utter_happy
+
+# 😢 Mood - Sad then Deny
+- story: mood sad then deny
+  steps:
+    - intent: mood_unhappy
+    - action: utter_cheer_up
+    - action: utter_did_that_help
+    - intent: deny
+    - action: utter_goodbye
+
+# ✨ Spell 1: AI - Cognitia Artificialia
+- story: ai lesson full
+  steps:
+    - intent: start_ai_lesson
+    - action: action_assign_house
+    - action: utter_ai_intro
+    - action: utter_ai_teach_1
+    - action: utter_ai_teach_2
+    - action: utter_ai_teach_3
+    - action: utter_ai_quiz
+
+- story: ai lesson and quiz success
+  steps:
+    - intent: start_ai_lesson
+    - action: action_assign_house
+    - action: utter_ai_intro
+    - action: utter_ai_teach_1
+    - action: utter_ai_teach_2
+    - action: utter_ai_teach_3
+    - action: utter_ai_quiz
+    - intent: answer_ai_quiz
+    - action: action_check_ai_answer
+
+- story: ai lesson and quiz retry
+  steps:
+    - intent: start_ai_lesson
+    - action: action_assign_house
+    - action: utter_ai_intro
+    - action: utter_ai_teach_1
+    - action: utter_ai_teach_2
+    - action: utter_ai_teach_3
+    - action: utter_ai_quiz
+    - intent: answer_ai_quiz
+    - action: action_check_ai_answer
+    - intent: answer_ai_quiz
+    - action: action_check_ai_answer
+
+# 📜 Spell 2: NLP - Verba Alchemica
+- story: nlp lesson full
+  steps:
+    - intent: start_nlp_lesson
+    - action: action_assign_house
+    - action: utter_nlp_intro
+    - action: utter_nlp_teach_1
+    - action: utter_nlp_teach_2
+    - action: utter_nlp_teach_3
+    - action: utter_nlp_quiz
+
+- story: nlp lesson and quiz success
+  steps:
+    - intent: start_nlp_lesson
+    - action: action_assign_house
+    - action: utter_nlp_intro
+    - action: utter_nlp_teach_1
+    - action: utter_nlp_teach_2
+    - action: utter_nlp_teach_3
+    - action: utter_nlp_quiz
+    - intent: answer_nlp_quiz
+    - action: action_check_nlp_answer
+
+- story: nlp lesson and quiz retry
+  steps:
+    - intent: start_nlp_lesson
+    - action: action_assign_house
+    - action: utter_nlp_intro
+    - action: utter_nlp_teach_1
+    - action: utter_nlp_teach_2
+    - action: utter_nlp_teach_3
+    - action: utter_nlp_quiz
+    - intent: answer_nlp_quiz
+    - action: action_check_nlp_answer
+    - intent: answer_nlp_quiz
+    - action: action_check_nlp_answer
+
+# 🛡️ Spell 3: Cybersecurity - Defensus Data
+- story: cyber lesson full
+  steps:
+    - intent: start_cyber_lesson
+    - action: action_assign_house
+    - action: utter_cyber_intro
+    - action: utter_cyber_teach_1
+    - action: utter_cyber_teach_2
+    - action: utter_cyber_teach_3
+    - action: utter_cyber_quiz
+
+- story: cyber lesson and quiz success
+  steps:
+    - intent: start_cyber_lesson
+    - action: action_assign_house
+    - action: utter_cyber_intro
+    - action: utter_cyber_teach_1
+    - action: utter_cyber_teach_2
+    - action: utter_cyber_teach_3
+    - action: utter_cyber_quiz
+    - intent: answer_cyber_quiz
+    - action: action_check_cyber_answer
+
+- story: cyber lesson and quiz retry
+  steps:
+    - intent: start_cyber_lesson
+    - action: action_assign_house
+    - action: utter_cyber_intro
+    - action: utter_cyber_teach_1
+    - action: utter_cyber_teach_2
+    - action: utter_cyber_teach_3
+    - action: utter_cyber_quiz
+    - intent: answer_cyber_quiz
+    - action: action_check_cyber_answer
+    - intent: answer_cyber_quiz
+    - action: action_check_cyber_answer
+
+# 📊 Spell 4: Data Science - Numerus Dominium
+- story: data lesson full
+  steps:
+    - intent: start_data_lesson
+    - action: action_assign_house
+    - action: utter_data_intro
+    - action: utter_data_teach_1
+    - action: utter_data_teach_2
+    - action: utter_data_teach_3
+    - action: utter_data_quiz
+
+- story: data lesson and quiz success
+  steps:
+    - intent: start_data_lesson
+    - action: action_assign_house
+    - action: utter_data_intro
+    - action: utter_data_teach_1
+    - action: utter_data_teach_2
+    - action: utter_data_teach_3
+    - action: utter_data_quiz
+    - intent: answer_data_quiz
+    - action: action_check_data_answer
+
+- story: data lesson and quiz retry
+  steps:
+    - intent: start_data_lesson
+    - action: action_assign_house
+    - action: utter_data_intro
+    - action: utter_data_teach_1
+    - action: utter_data_teach_2
+    - action: utter_data_teach_3
+    - action: utter_data_quiz
+    - intent: answer_data_quiz
+    - action: action_check_data_answer
+    - intent: answer_data_quiz
+    - action: action_check_data_answer
+
+# 🧱 Spell 5: Data Structures - Structura Codex
+- story: dsa lesson full
+  steps:
+    - intent: start_dsa_lesson
+    - action: action_assign_house
+    - action: utter_dsa_intro
+    - action: utter_dsa_teach_1
+    - action: utter_dsa_teach_2
+    - action: utter_dsa_teach_3
+    - action: utter_dsa_quiz
+
+- story: dsa lesson and quiz success
+  steps:
+    - intent: start_dsa_lesson
+    - action: action_assign_house
+    - action: utter_dsa_intro
+    - action: utter_dsa_teach_1
+    - action: utter_dsa_teach_2
+    - action: utter_dsa_teach_3
+    - action: utter_dsa_quiz
+    - intent: answer_dsa_quiz
+    - action: action_check_dsa_answer
+
+- story: dsa lesson and quiz retry
+  steps:
+    - intent: start_dsa_lesson
+    - action: action_assign_house
+    - action: utter_dsa_intro
+    - action: utter_dsa_teach_1
+    - action: utter_dsa_teach_2
+    - action: utter_dsa_teach_3
+    - action: utter_dsa_quiz
+    - intent: answer_dsa_quiz
+    - action: action_check_dsa_answer
+    - intent: answer_dsa_quiz
+    - action: action_check_dsa_answer

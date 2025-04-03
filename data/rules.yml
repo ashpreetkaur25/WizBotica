@@ -1,0 +1,65 @@
+version: "3.1"
+
+rules:
+
+# --- House Selection Flow ---
+- rule: Handle house guide request
+  steps:
+    - intent: request_house_guide
+    - action: utter_house_guide
+
+
+# --- AI Spell Lesson ---
+- rule: Start AI lesson
+  steps:
+    - intent: start_ai_lesson
+    - action: action_assign_house
+    - action: utter_ai_intro
+    - action: utter_ai_teach_1
+    - action: utter_ai_teach_2
+    - action: utter_ai_teach_3
+    - action: utter_ai_quiz
+
+# --- NLP Spell Lesson ---
+- rule: Start NLP lesson
+  steps:
+    - intent: start_nlp_lesson
+    - action: action_assign_house
+    - action: utter_nlp_intro
+    - action: utter_nlp_teach_1
+    - action: utter_nlp_teach_2
+    - action: utter_nlp_teach_3
+    - action: utter_nlp_quiz
+
+# --- Cybersecurity Spell Lesson ---
+- rule: Start Cyber lesson
+  steps:
+    - intent: start_cyber_lesson
+    - action: action_assign_house
+    - action: utter_cyber_intro
+    - action: utter_cyber_teach_1
+    - action: utter_cyber_teach_2
+    - action: utter_cyber_teach_3
+    - action: utter_cyber_quiz
+
+# --- Data Science Spell Lesson ---
+- rule: Start Data Science lesson
+  steps:
+    - intent: start_data_lesson
+    - action: action_assign_house
+    - action: utter_data_intro
+    - action: utter_data_teach_1
+    - action: utter_data_teach_2
+    - action: utter_data_teach_3
+    - action: utter_data_quiz
+
+# --- DSA Spell Lesson ---
+- rule: Start DSA lesson
+  steps:
+    - intent: start_dsa_lesson
+    - action: action_assign_house
+    - action: utter_dsa_intro
+    - action: utter_dsa_teach_1
+    - action: utter_dsa_teach_2
+    - action: utter_dsa_teach_3
+    - action: utter_dsa_quiz

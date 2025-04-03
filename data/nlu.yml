@@ -1,0 +1,151 @@
+version: "3.1"
+
+nlu:
+
+# 🌟 Greeting
+- intent: greet
+  examples: |
+    - hello
+    - hi
+    - hey there
+    - greetings
+    - what's up
+    - yo wizard
+    - good day
+
+# 😢 Mood - Unhappy
+- intent: mood_unhappy
+  examples: |
+    - I'm feeling down
+    - today sucks
+    - I'm sad
+    - having a bad day
+    - things aren't going well
+    - not okay
+
+# ✅ Affirmation
+- intent: affirm
+  examples: |
+    - yes
+    - indeed
+    - absolutely
+    - correct
+    - you’re right
+
+# ❌ Denial
+- intent: deny
+  examples: |
+    - no
+    - not really
+    - nope
+    - I don't think so
+
+# 🏰 House Selection
+- intent: choose_house
+  examples: |
+    - I choose Ignis
+    - Aquae suits me
+    - put me in Sylvae
+    - Fulgur is my house
+    - I'd like House Ignis
+    - I want to be in Aquae
+    - my house is Sylvae
+    - Fulgur sounds cool
+    - assign me Ignis
+
+# 📜 Request House Guide
+- intent: request_house_guide
+  examples: |
+    - tell me about the houses
+    - what are the houses
+    - guide me on house selection
+    - help me choose a house
+    - explain the houses
+
+# ✨ Spell 1: AI
+- intent: start_ai_lesson
+  examples: |
+    - I want to learn AI
+    - teach me artificial intelligence
+    - start AI lesson
+    - cast Cognitia Artificialia
+    - begin the AI spell
+    - start Cognitia Artificialia
+
+- intent: answer_ai_quiz
+  examples: |
+    - AI is when machines mimic human intelligence
+    - artificial intelligence helps machines think
+    - machines that make decisions
+    - it's about smart machines
+    - intelligence in software
+    - algorithms that learn
+
+# ✨ Spell 2: NLP
+- intent: start_nlp_lesson
+  examples: |
+    - I want to learn NLP
+    - teach me natural language processing
+    - start NLP lesson
+    - cast Verba Alchemica
+    - begin the NLP spell
+    - start Verba Alchemica
+
+- intent: answer_nlp_quiz
+  examples: |
+    - NLP helps machines understand human language
+    - it's about interpreting text
+    - language processing by computers
+    - analyzing human speech
+    - transforming words into meaning
+
+# ✨ Spell 3: Cybersecurity
+- intent: start_cyber_lesson
+  examples: |
+    - teach me cybersecurity
+    - I want to learn about security
+    - start cyber lesson
+    - start Defensus Data
+    - cast the cybersecurity spell
+
+- intent: answer_cyber_quiz
+  examples: |
+    - protecting data and systems
+    - it's about preventing hacking
+    - defend networks from attacks
+    - guard digital realms
+    - stop cyber threats
+
+# ✨ Spell 4: Data Science
+- intent: start_data_lesson
+  examples: |
+    - teach me data science
+    - I want to learn analytics
+    - start data spell
+    - begin Numerus Dominium
+    - start Numerus Dominium lesson
+
+- intent: answer_data_quiz
+  examples: |
+    - extracting insights from data
+    - finding patterns in numbers
+    - analyzing information
+    - using statistics to make decisions
+    - machine learning and data exploration
+
+# ✨ Spell 5: Data Structures
+- intent: start_dsa_lesson
+  examples: |
+    - teach me data structures
+    - start DSA lesson
+    - cast Structura Codex
+    - begin Structura Codex
+    - I want to learn DSA
+
+- intent: answer_dsa_quiz
+  examples: |
+    - organizing and storing data
+    - managing data efficiently
+    - accessing data quickly
+    - data containers like arrays and trees
+    - efficient data structures
